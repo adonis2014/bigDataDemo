@@ -1,0 +1,8 @@
+#run kafka producer or consumer
+java -jar big-data-plan.jar
+
+#run storm topology
+./storm jar ../../src/storm/big-data-plan.jar com.seven.test.kafka.MyKafkaTopology
+
+#flume start
+./flume-ng agent --conf ../conf --conf-file ../conf/flume.conf --name producer -Dflume.root.logger=INFO,console
